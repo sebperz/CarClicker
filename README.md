@@ -19,6 +19,34 @@ La aplicacion sigue el patron MVC:
 - Interfaz responsiva gracias a Bootstrap
 - Sin dependencias locales - todo se carga desde CDN
 
+## Descripcion de Componentes
+
+### Model (Capa de Datos)
+- **Tecnologia**: JavaScript ES6+ (vanilla)
+- **Estructura**: Objeto `model` con dos propiedades:
+  - `currentCar`: Referencia al objeto del coche seleccionado
+  - `cars`: Array de objetos que almacena cada coche con sus propiedades
+- **Almacenamiento**: En memoria (no persistente)
+
+### View (Capa de Presentacion)
+- **Tecnologias**:
+  - HTML5 (estructura del DOM)
+  - Bootstrap 4.4.1 (CSS desde CDN)
+  - jQuery 3.4.1 (manipulacion del DOM desde CDN)
+  - Popper.js 1.16.0 (dependencia de Bootstrap, desde CDN)
+  - Bootstrap JS 4.4.1 (componentes interactivos desde CDN)
+- **Componentes**:
+  - `carListView`: Renderiza la lista de coches en el panel lateral
+  - `carView`: Renderiza la imagen, nombre y contador del coche seleccionado
+
+### Controller (Capa de Control)
+- **Tecnologia**: JavaScript ES6+ (vanilla)
+- **Funcion**: Coordina las interacciones entre Model y View:
+  - Inicializa la aplicacion estableciendo el estado inicial
+  - Expone metodos publicos para acceder y modificar el modelo
+  - Detecta eventos de clic en la vista y actualiza el modelo
+  - Invoca el metodo `render()` de la vista despues de cada cambio
+
 ## Coches Disponibles
 
 - Coupe Maserati
